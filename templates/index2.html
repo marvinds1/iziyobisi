@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static\styles2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="ideZul"></div> -->
+    <div class="heroContent">
+      <h1 class="heroText">Find Your Medicine</h1>
+      <form class="form" action="/recommendation" method="POST">
+        <div class="input">
+          <img
+            class="icon"
+            src="{{url_for('static', filename='searchIcon.png')}}"
+            alt=""
+          />
+          <input
+            type="text"
+            class="search"
+            id="penyakit"
+            name="penyakit"
+            placeholder="Enter Disease Name"
+          />
+          <button class="submit">FIND</button>
+        </div>
+      </form>
+      {% if ob %}
+      <div class="tableFixHead">
+        <table class="">
+          <thead>
+            <tr>
+              <th class="header">Produk</th>
+              <th class="header">Harga</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for col in ob %}
+            <tr>
+              <td>{{col.1}}</td>
+              <td>{{col.2}}</td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </div>
+
+    <img
+      class="heroImage"
+      src="{{url_for('static', filename='findMedicine.png')}}"
+      alt=""
+    />
+    <h1 class="oren satu">+</h1>
+    <h1 class="oren dua">+</h1>
+    <h1 class="oren tiga">+</h1>
+    <h1 class="oren empat">+</h1>
+    <h1 class="oren lima">+</h1>
+    <h1 class="oren enam">+</h1>
+    <h1 class="oren tujuh">+</h1>
+    <h1 class="oren delapan">+</h1>
+    <h1 class="oren sembilan">+</h1>
+    <!-- <h1 class="oren sepuluh">+</h1> -->
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

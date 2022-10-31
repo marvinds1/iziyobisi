@@ -1,0 +1,117 @@
+@import "animation.css";
+:root {
+  --oren: #ff9f00;
+  --tosca: #00c7c7;
+  --kuning: #e1ff26;
+  --ijo: #00c7c7;
+  --ijotua: #007b70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ideZul {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: transparent;
+  z-index: 99;
+}
+body {
+  background-color: #f7fdfe;
+  overflow: hidden;
+}
+.oren {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: var(--ijo);
+  display: inline;
+  position: absolute;
+}
+.tosca {
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: var(--tosca);
+  display: inline;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.satu {
+  font-size: 10em;
+  top: 10px;
+  left: 170px;
+}
+.dua {
+  font-size: 20em;
+  bottom: -120px;
+  left: -35px;
+}
+.tiga {
+  font-size: 35em;
+  top: -320px;
+  left: 600px;
+}
+.empat {
+  font-size: 10em;
+  bottom: 120px;
+  left: 500px;
+}
+.lima {
+  font-size: 10em;
+  bottom: 0px;
+  right: 50px;
+}
+.enam {
+  font-size: 6em;
+  top: 30px;
+  right: 150px;
+}
+.heroImage {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  right: 160px;
+  z-index: 999;
+  animation: atas-bawah-2 6s ease-in infinite;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  top: 220px;
+  left: 150px;
+  z-index: 9999999;
+}
+.heroText {
+  font-size: 7rem;
+  color: var(--ijotua);
+}
+.heroDesc {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.start {
+  width: 130px;
+  outline: none;
+  background-color: var(--ijotua);
+  border: none;
+  padding: 1em 0.8em;
+  border-radius: 1.8em;
+  font-weight: bold;
+  margin-top: 2.5em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  color: white;
+}
+.start:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}

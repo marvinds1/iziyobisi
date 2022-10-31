@@ -1,0 +1,267 @@
+@import "./animation.css";
+:root {
+  --oren: #ff9f00;
+  --orentua: #e68f05;
+  --tosca: #72dad2;
+  --kuning: rgba(225, 255, 38, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ideZul {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: transparent;
+  z-index: 99;
+}
+body {
+  background-color: #fffbf4;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+.heroImage {
+  position: absolute;
+  width: 630px;
+  bottom: 0px;
+  left: 100px;
+  z-index: 999;
+  animation: pop-slide-up 2s cubic-bezier(0, 0.67, 0.2, 1.05) forwards,
+    atas-bawah-2 6s 2s linear infinite;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  position: absolute;
+  top: 130px;
+  right: 100px;
+  z-index: 9999;
+  /* animation: pop-scale-up 0.1s cubic-bezier(0, 0.67, 0.2, 1.05) forwards;
+  animation-iteration-count: 1; */
+  /* background-color: blue; */
+}
+.heroText {
+  font-size: 5rem;
+  /* background-color: red; */
+  color: var(--oren);
+  display: inline;
+}
+.input {
+  margin-top: 25px;
+  background-color: var(--kuning);
+  padding-left: 1em;
+  padding-right: 0;
+  overflow: hidden;
+  border-radius: 0.9em;
+  gap: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 28px;
+  /* color: white; */
+}
+.search {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(38, 38, 38, 0.6);
+  padding-left: 0.5em;
+  border: none;
+  /* margin-top: 10px; */
+  outline: none;
+  height: 40px;
+  border-radius: 15px;
+  /* background-color: var(--kuning); */
+  background-color: transparent;
+  /* background-color: ; */
+  width: 100%;
+}
+.submit {
+  font-style: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  /* text-align: end; */
+  /* padding-right: 30px; */
+  letter-spacing: 2px;
+  cursor: pointer;
+  /* background-color: transparent; */
+  outline: none;
+  width: 10%;
+  border: 1px solid black;
+  height: 100%;
+  border: none;
+  /* background-color: #ff9f00;flask run */
+  /* background: linear-gradient(90deg, transparent, var(--oren)); */
+}
+.search::placeholder {
+  color: rgba(38, 38, 38, 0.6);
+}
+.heroDesc {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.start {
+  width: 130px;
+  outline: none;
+  background-color: var(--oren);
+  border: none;
+  padding: 1em 0.8em;
+  border-radius: 1.8em;
+  font-weight: bold;
+  margin-top: 2.5em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+.start:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+table {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--orentua);
+  /* padding: 0.25em; */
+  border-spacing: 0.4em 0.3em;
+  width: 100%;
+  /* color: white; */
+  /* border-collapse: collapse; */
+}
+th {
+  background-color: var(--orentua);
+  color: white;
+  letter-spacing: 1px;
+}
+th,
+td {
+  padding: 0.5em;
+  text-align: center;
+}
+td {
+  background-color: #fff;
+  /* gap: 5pxss; */
+}
+.tableFixHead {
+  margin-top: 2em;
+  width: 80%;
+  overflow-y: auto;
+  height: 50vh;
+  border-radius: 10px 10px 0 0;
+  align-self: center;
+}
+
+.tableFixHead thead {
+  position: sticky;
+  top: 0;
+}
+.hidden {
+  display: none;
+}
+
+/* hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+body {
+  scrollbar-width: none;
+}
+
+.oren {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: var(--oren);
+  display: inline;
+  position: absolute;
+}
+.tosca {
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: var(--tosca);
+  display: inline;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.satu {
+  font-size: 10em;
+  bottom: 100px;
+  left: -15px;
+  opacity: 0.3;
+  /* background-color: red; */
+  animation: atas-bawah 40s ease infinite;
+}
+.dua {
+  font-size: 20em;
+  top: -100px;
+  left: 200px;
+  opacity: 0.4;
+  animation: kanan-kiri 6s ease infinite;
+  /* background-color: red; */
+}
+.tiga {
+  font-size: 5em;
+  top: 120px;
+  left: 327px;
+  opacity: 1;
+  animation: kanan-kiri-2 6s ease infinite;
+}
+.empat {
+  font-size: 5em;
+  bottom: 120px;
+  left: 700px;
+  animation: kanan-kiri 20s linear infinite;
+}
+.lima {
+  font-size: 35em;
+  bottom: -320px;
+  right: -30px;
+  opacity: 0.4;
+  animation: zoom-in 20s linear infinite;
+}
+.enam {
+  font-size: 8em;
+  top: 20px;
+  right: -30px;
+  opacity: 0.6;
+  animation: square 30s ease infinite;
+}
+.tujuh {
+  font-size: 5em;
+  top: 20px;
+  right: 450px;
+  opacity: 1;
+}
+.delapan {
+  font-size: 12em;
+  top: 160px;
+  right: 750px;
+  opacity: 0.3;
+  animation: gemerlap 10s ease infinite;
+}
+.sembilan {
+  font-size: 8em;
+  bottom: 200px;
+  right: 350px;
+  opacity: 1;
+  animation: gemerlap 6s ease infinite;
+}
+.sepuluh {
+  font-size: 6em;
+  bottom: 20px;
+  right: 14 0px;
+  opacity: 1;
+}
